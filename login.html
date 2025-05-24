@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register - Your Health Pharmacy</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div id="register-form" class="form-container animate-form">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <div class="pharmacy-logo">
+                <span class="logo-icon">&#10133;</span> <!-- Pharmacy plus symbol -->
+                <span class="pharmacy-name">PHARMACY</span>
+            </div>
+            <h2>Create an Account</h2>
+            <form action="register.php" method="POST" id="registerForm">
+                <div class="input-group">
+                    <label for="reg-username">Username</label>
+                    <input type="text" id="reg-username" name="username" required>
+                    <span class="error-message" id="reg-username-error">Please enter a valid username</span>
+                </div>
+                
+                <div class="input-group">
+                    <label for="reg-email">Email Address</label>
+                    <input type="email" id="reg-email" name="email" required>
+                    <span class="error-message" id="reg-email-error">Please enter a valid email address</span>
+                </div>
+                
+                <div class="input-group">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" name="password" required>
+                    <span class="error-message" id="reg-password-error">Password must be at least 8 characters</span>
+                </div>
+                
+                <button type="submit">Register</button>
+            </form>
+            <p class="form-footer">Already have an account? <a href="#" id="show-login">Login here</a></p>
+        </div>
+        
+        <div id="login-form" class="form-container" style="display: none;">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <div class="pharmacy-logo">
+                <span class="logo-icon">&#10133;</span> <!-- Pharmacy plus symbol -->
+                <span class="pharmacy-name">PHARMACY</span>
+            </div>
+            <h2>Welcome Back</h2>
+            <form action="login.php" method="POST" id="loginForm">
+                <div class="input-group">
+                    <label for="log-username">Username</label>
+                    <input type="text" id="log-username" name="username" required>
+                    <span class="error-message" id="log-username-error">Please enter your username</span>
+                </div>
+                
+                <div class="input-group">
+                    <label for="log-password">Password</label>
+                    <input type="password" id="log-password" name="password" required>
+                    <span class="error-message" id="log-password-error">Please enter your password</span>
+                </div>
+                
+                <button type="submit">Login</button>
+            </form>
+            <p class="form-footer">Don't have an account? <a href="#" id="show-register">Register here</a></p>
+        </div>
+    </div>
+</body>
+</html>
